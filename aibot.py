@@ -3,6 +3,7 @@ from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, filters
 import ollama
 import nest_asyncio
+import os
 
 nest_asyncio.apply()
 
@@ -10,7 +11,8 @@ nest_asyncio.apply()
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
 
 # Токен, который вы получили от @BotFather
-TOKEN = '7335067434:AAFC2efTg1uO42hwlmTrYhwX9dtyZlKi28A'  # Replace with your actual token
+TOKEN = os.environ['CONFIRMAT_BOT_TOKEN'] # Replace with your actual token
+print(TOKEN)
 
 # Словарь для хранения данных пользователей
 user_ids = {}
