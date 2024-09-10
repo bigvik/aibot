@@ -40,7 +40,7 @@ async def handle_message(update: Update, context):
 
     try:
         # Call the ollama.chat function with the context messages
-        response = ollama.chat(model='llama3:latest', messages=context_memory[user_id])
+        response = ollama.chat(model='llama3.1:latest', messages=context_memory[user_id])
         # Отправляем ответ пользователю
         await update.message.reply_text(response['message']['content'])
     except Exception as e:
