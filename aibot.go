@@ -47,7 +47,6 @@ func main() {
 			}
 			offset = update.UpdateId + 1
 		}
-		fmt.Println(updates)
 	}
 }
 
